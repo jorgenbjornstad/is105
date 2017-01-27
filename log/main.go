@@ -1,10 +1,10 @@
 package main
 
-import ("fmt"
-	"log/funksjoner"
+import (
+	"fmt"
+	"log/functions"
 )
 
 func main() {
-	fmt.Println(funksjoner.Log2())
-
+	fmt.Println(functions.Log2())
 }

@@ -1,4 +1,4 @@
-package funksjoner
+package functions
 
 import "math"
 
@@ -7,3 +7,4 @@ func Log2() float64 {
 	var result = math.Log2(x)
 	return result
 }
+
