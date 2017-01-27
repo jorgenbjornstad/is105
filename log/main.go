@@ -1,7 +1,7 @@
 package main
 
 import ("fmt"
-	"LogProsjekt/funksjoner"
+	"log/funksjoner"
 )
 
 func main() {
