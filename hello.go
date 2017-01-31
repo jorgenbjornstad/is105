@@ -1,4 +1,4 @@
-﻿package main
+package main
 
 import (
  "fmt"
@@ -11,7 +11,7 @@ import (
     fmt.Printf("Hello, Vebjørn\n")
     fmt.Println(x)
     fmt.Println("Jeg bare skriver det samme som dere skrev, men har ikke mye peiling på hva det betyr")
-    fmt.Println("JJ")
+    fmt.Println("JJ HEI»)
     fmt.Println("Lønner seg å sette seg ned med tutorialen :)\nEr ganske likt java\nFunksjonene er bare fra standardbiblioteket")
   fmt.Println("Håper du kan lære meg litt av dette Vebbis!")
 <<<<<<< HEAD
