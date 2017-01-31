@@ -1,4 +1,4 @@
-ï»¿package main
+package main
 
 import (
  "fmt"
@@ -8,13 +8,17 @@ import (
  func main() {
      var y float64 = 8
  x := math.Log2(y)
-    fmt.Printf("Hello, VebjÃ¸rn\n")
+    fmt.Printf("Hello, Vebjørn\n")
     fmt.Println(x)
-    fmt.Println("Jeg bare skriver det samme som dere skrev, men har ikke mye peiling pÃ¥ hva det betyr")
+    fmt.Println("Jeg bare skriver det samme som dere skrev, men har ikke mye peiling på hva det betyr")
     fmt.Println("JJ")
-    fmt.Println("LÃ¸nner seg Ã¥ sette seg ned med tutorialen :)\nEr ganske likt java\nFunksjonene er bare fra standardbiblioteket")
-    fmt.Println("Funker dette nÃ¥?")
-    fmt.println("Kim was here v2")
-    fmt.Println("JÃ¸rgen prÃ¸ver Ã¥ vÃ¦re med")
+    fmt.Println("Lønner seg å sette seg ned med tutorialen :)\nEr ganske likt java\nFunksjonene er bare fra standardbiblioteket")
+  fmt.Println("Håper du kan lære meg litt av dette Vebbis!")
+<<<<<<< HEAD
+    fmt.Println("Men da fikk vi det til da")
+=======
+  fmt.println("Kim was here v2")
+  fmt.println("Hei,hei!")
+>>>>>>> a4c2d2728cf6c87f636d5c395410d076d57e46fe
 
  }
