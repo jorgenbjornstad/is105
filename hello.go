@@ -18,6 +18,7 @@ import (
     fmt.Println("Men da fikk vi det til da")
 =======
   fmt.println("Kim was here v2")
+  fmt.println("Hei,hei!")
 >>>>>>> a4c2d2728cf6c87f636d5c395410d076d57e46fe
 
  }
