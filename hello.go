@@ -14,6 +14,10 @@ import (
     fmt.Println("JJ")
     fmt.Println("Lønner seg å sette seg ned med tutorialen :)\nEr ganske likt java\nFunksjonene er bare fra standardbiblioteket")
   fmt.Println("Håper du kan lære meg litt av dette Vebbis!")
+<<<<<<< HEAD
     fmt.Println("Men da fikk vi det til da")
+=======
+  fmt.println("Kim was here v2")
+>>>>>>> a4c2d2728cf6c87f636d5c395410d076d57e46fe
 
  }
