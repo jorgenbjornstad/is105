@@ -1,4 +1,4 @@
-package main
+﻿package main
 
 import (
  "fmt"
@@ -20,6 +20,7 @@ import (
   fmt.println("Kim was here v2")
   fmt.println("Hei,hei!")
   fmt.println("Nå da?")
+  fmt.println("Goodbye")
 >>>>>>> a4c2d2728cf6c87f636d5c395410d076d57e46fe
 
  }
