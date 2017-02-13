@@ -1,14 +1,12 @@
 package sum
 
-	func SumInt8(a, b int8) int8 {
+func SumInt8(a, b int8) int8 {
 	return a + b
-	}
+}
 
-	func SumFloat64(a, b float64) float64 {
+func SumUint64(a, b uint64) uint64 {
 	return a + b
-
-	}
-
+}
   func SumInt32(a, b int32) int32 {
   return a + b
   }
@@ -17,6 +15,6 @@ package sum
   return a + b
   }
 
-  func Sumint64(a, b int64) int64 {
+  func SumInt64(a, b int64) int64 {
   return a + b
   }
