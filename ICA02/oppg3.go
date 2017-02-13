@@ -3,6 +3,7 @@ package main
 import "os"
 import "fmt"
 import "strconv"
+import "gitClone/is105/ICA02/sum"
 
 func main() {
 
@@ -23,9 +24,7 @@ if err2 == nil {
   fmt.Println("error")
 }
 
-
-sum = f1 + f2
-fmt.Println("= ",sum)
-
+resultat :=  sum.SumFloat64(f1, f2)
+fmt.Println("= ", resultat)
 
 }
