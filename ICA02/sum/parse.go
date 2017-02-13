@@ -22,3 +22,12 @@ func ConvertUint(input2 string) uint64{
     }
     return value
     }
+func ConvertFloat(input3 string) float64{
+    value, err := strconv.ParseFloat(input3, 10, 64)
+    if err == nil {
+        fmt.Println(value)
+     }else{
+          fmt.Println("error")
+      }
+      return value
+      }

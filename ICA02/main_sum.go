@@ -9,6 +9,8 @@ func main() {
   arg2 := os.Args[2]
   arg3 := os.Args[3]
 
+  sum.
+
 if (arg1 == "int32"){
   var1 := sum.ConvertInt(arg2)
   fmt.Println("+")
@@ -32,12 +34,12 @@ if (arg1 == "int32"){
     resultat :=  sum.SumUint32(tall1, tall2)
     fmt.Println("= ", resultat)
   }else if (arg1 == "uint64"){
-    tall1 := sum.ConvertUint(arg2)
+    tall1 := sum.ConvertFloat(arg2)
     fmt.Println("+")
-    tall2 := sum.ConvertUint(arg3)
-    resultat :=  sum.SumUint64(tall1, tall2)
+    tall2 := sum.ConvertFloat(arg3)
+    resultat :=  sum.SumFloat64(tall1, tall2)
     fmt.Println("= ", resultat)
     }else {
-    fmt.Println("Invalid type. Valid types are int32, int64, uint32, uint64")
+    fmt.Println("Invalid type. Valid types are int32, int64, uint32, float64")
     }
   }

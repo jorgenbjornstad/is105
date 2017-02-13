@@ -4,7 +4,7 @@ func SumInt8(a, b int8) int8 {
 	return a + b
 }
 
-func SumUint64(a, b uint64) uint64 {
+func SumFloat64(a, b float64) float64 {
 	return a + b
 }
   func SumInt32(a, b int32) int32 {
