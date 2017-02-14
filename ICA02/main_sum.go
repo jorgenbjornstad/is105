@@ -2,7 +2,7 @@ package main
 
 import "os"
 import "fmt"
-import "is105/ICA02/sum"
+import "sum"
 
 func main() {
   arg1 := os.Args[1]
