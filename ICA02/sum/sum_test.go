@@ -40,7 +40,7 @@ var sum_tests_float64 = []struct {
 }{
 	{1, 2, 3},
 	{4, 5, 9},
-	{118, 1, 190},
+	{4000, 5000, 9000},
 }
 
 var sum_tests_uint32 = []struct {

@@ -51,8 +51,8 @@ func BenchmarkBSortModified100(b *testing.B) {
 		benchmarkBSortModified(1000, b)
 	}
 
-		func BenchmarkBSortModified100030(b *testing.B) {
-			benchmarkBSortModified(100030, b)
+		func BenchmarkBSortModified10000(b *testing.B) {
+			benchmarkBSortModified(10000, b)
 		}
 
 func benchmarkBSortModified(i int, b *testing.B) {
