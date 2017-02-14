@@ -43,15 +43,15 @@ func benchmarkBSort(i int, b *testing.B) {
 		Bubble_sort(values)
 	}
 }
-func benchmarkBSortModified100(b *testing.B) {
+func BenchmarkBSortModified100(b *testing.B) {
 	benchmarkBSortModified(100, b)
 }
 
-	func benchmarkBSortModified1000(b *testing.B) {
+	func BenchmarkBSortModified1000(b *testing.B) {
 		benchmarkBSortModified(1000, b)
 	}
 
-		func benchmarkBSortModified100030(b *testing.B) {
+		func BenchmarkBSortModified100030(b *testing.B) {
 			benchmarkBSortModified(100030, b)
 		}
 
