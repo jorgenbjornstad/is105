@@ -1,11 +1,14 @@
 package algorithms
 
-// Les https://en.wikipedia.org/wiki/Bubble_sort
-func Bubble_sort_modified(list []int) {
-	// Deres kode her
+
+func swap(list []int, i, j int){
+	tmp := list[j]
+	list[j] = list[i]
+	list[i] = tmp
 }
 
-// Implementering av Bubble_sort algoritmen
+// Les https://en.wikipedia.org/wiki/Bubble_sort
+//func Bubble_sort_modified(list []int){
 func Bubble_sort(list []int) {
 	// find the length of list n
 	n := len(list)
@@ -15,6 +18,21 @@ func Bubble_sort(list []int) {
 				temp := list[j+1]
 				list[j+1] = list[j]
 				list[j] = temp
+			}
+		}
+	}
+}
+
+// Implementering av Bubble_sort algoritmen
+func Bubble_sort_modified(list []int) {
+	// find the length of list n
+	swapped := true;
+		for swapped {
+			swapped = false
+			for i := 0; i < len(list) - 1; i++ {
+				if list[i + 1] < list[i] {
+					swap(list, i, i + 1)
+					swapped = true
 			}
 		}
 	}
