@@ -44,7 +44,7 @@ func benchmarkBSort(i int, b *testing.B) {
 	}
 }
 func BenchmarkBSortModified100(b *testing.B) {
-	benchmarkBSortModified(100, b)
+ benchmarkBSortModified(100, b)
 }
 
 	func BenchmarkBSortModified1000(b *testing.B) {
@@ -61,8 +61,21 @@ func benchmarkBSortModified(i int, b *testing.B) {
 		values := perm(i)
 		b.StartTimer()
 		Bubble_sort_modified(values)
+  }
 }
+func BenchmarkBSortModifieder100(b *testing.B) {
+ benchmarkBSortModifieder(100, b)
 }
+
+func benchmarkBSortModifieder(i int, b *testing.B) {
+	for j := 0; j < b.N; j++ {
+		b.StopTimer()
+		values := perm(i)
+		b.StartTimer()
+		Bubble_sort_modifieder(values)
+	}
+}
+
 // Implementasjon av testfunksjoner for Quicksort algoritmen
 func TestQSort(t *testing.T) {
 	values := []int{9, 1, 20, 3, 6, 7}
