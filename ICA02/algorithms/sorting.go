@@ -9,6 +9,7 @@ func swap(list []int, i, j int){
 
 // Les https://en.wikipedia.org/wiki/Bubble_sort
 //func Bubble_sort_modified(list []int){
+// Implementering av Bubble_sort algoritmen
 func Bubble_sort(list []int) {
 	// find the length of list n
 	n := len(list)
@@ -23,7 +24,7 @@ func Bubble_sort(list []int) {
 	}
 }
 
-// Implementering av Bubble_sort algoritmen
+//func Bubble_sort_modified(list []int){
 func Bubble_sort_modified(list []int) {
 	// find the length of list n
 	swapped := true;

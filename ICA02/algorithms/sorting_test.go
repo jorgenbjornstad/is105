@@ -46,6 +46,15 @@ func benchmarkBSort(i int, b *testing.B) {
 func benchmarkBSortModified100(b *testing.B) {
 	benchmarkBSortModified(100, b)
 }
+
+	func benchmarkBSortModified1000(b *testing.B) {
+		benchmarkBSortModified(1000, b)
+	}
+
+		func benchmarkBSortModified100030(b *testing.B) {
+			benchmarkBSortModified(100030, b)
+		}
+
 func benchmarkBSortModified(i int, b *testing.B) {
 	for j := 0; j < b.N; j++ {
 		b.StopTimer()
