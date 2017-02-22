@@ -28,7 +28,6 @@ func IterateOverASCIIStringLiteral() {
 
 // IterateOverASCIIStringLiteral
 
-
 // Funksjonen skal generere en utskrift fra en sekvens av bytes,
 // dvs. av typen []bytes (det betyr at du må finne den heksadesimale
 // eller binære representasjonen av alle tegn i strengen,
@@ -37,4 +36,6 @@ func IterateOverASCIIStringLiteral() {
 // Funksjonen greetingASCII() returnerer en variabel av typen string,
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1b
-func GreetingASCII() {}
+func greetingASCII() {
+	fmt.Printf("Hello \x3A\x2D\x29")
+}
