@@ -1,4 +1,4 @@
-package ascii
+﻿package ascii
 
 import "fmt"
 
@@ -36,6 +36,6 @@ func IterateOverASCIIStringLiteral() {
 // Funksjonen greetingASCII() returnerer en variabel av typen string,
 // som inneholder kun ASCII tegn (ikke utvidet ASCII).
 // Gjelder oppgave 1b
-func greetingASCII() {
+func GreetingASCII() {
 	fmt.Println("\x48\x65\x6C\x6C\x6F \x3A\x2D\x29")
 }
