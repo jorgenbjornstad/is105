@@ -1,4 +1,4 @@
-﻿package ascii
+package ascii
 
 import "fmt"
 
@@ -20,9 +20,7 @@ const Ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 // ...
 func IterateOverASCIIStringLiteral() {
 	for i := 0; i < len(Ascii); i++ {
-		fmt.Printf("%x ", Ascii[i])
-		fmt.Printf("%c ", Ascii[i])
-		fmt.Printf("%b\n", Ascii[i])
+		fmt.Printf("%b  %q  %x  \n", Ascii[i], Ascii[i], Ascii[i])
 	}
 }
 
