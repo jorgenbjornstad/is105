@@ -22,6 +22,5 @@ for i := 0; i < len(a); i++ {
     if con == false {
       fmt.Println("index", j, "is not part of ASCII")
     }
-    }
   }
 }
