@@ -21,9 +21,13 @@ const Ascii ="\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89" +
 //	`àáâãäåæçèéêëìíîï` +
 //	`ðñòóôõö÷øùúûüýþÿ`
 func IterateOverExtendedASCIIStringLiteral(sl string) {
-	for i := 0; i < len(Ascii); i++ {
-		fmt.Printf("%b  %q  %x  \n", Ascii[i], Ascii[i], Ascii[i])
+var extascii []byte
+for i := 0x80; i <= 0xFF; i++ {
+	extascii = append(extascii, byte (i))
 	}
+fmt.Println(extascii)
+/** fmt.Printf("%c", extascii)
+}
 }
 
 // Kode for Oppgave 2b
