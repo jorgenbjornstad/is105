@@ -3,5 +3,5 @@ package main
 import "./iso"
 
 func main() {
-	iso.IterateOverExtendedASCIIStringLiteral()
+	iso.IterateOverExtendedASCIIStringLiteral(iso.CreateExtendedASCII())
 }
