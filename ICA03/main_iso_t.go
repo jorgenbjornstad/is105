@@ -5,17 +5,14 @@ import "./iso"
 
 func main() {
 
-  var extascii []byte
-	for i := 0x80; i <= 0xFF; i++ {
-	extascii = append(extascii, byte(i))
-	}
-
+  e := iso.ExtendedAscii
   h := iso.Hello
 
   var con bool
+
   for j := 0; j < len(h); j++ {
-    for i := 0; i < len(extascii); i++ {
-      if h[j] == extascii[i] {
+  for i := 0; i < len(e); i++ {
+      if h[j] == e[i] {
         con = true
         break
       } else {
