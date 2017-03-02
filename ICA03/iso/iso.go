@@ -32,13 +32,14 @@ func IterateOverExtendedASCIIStringLiteral(extascii string) {
 
 
 // Kode for Oppgave 2b
-func GreetingExtendedASCII() {
+const Hello = "\x53\x61\x6C\x75\x74\x2C\x20\xE7\x61\x20\x76" +
+	"\x61\x20\xB0\x2D\x29\x20\x80\x35\x30"
+
+func GreetingExtendedASCII() string {
 	var extascii []byte
 	for i := 0x80; i <= 0xFF; i++ {
 	extascii = append(extascii, byte(i))
 	}
-	fmt.Printf("%q", string(extascii))
-	fmt.Printf("\n \n %s", string(extascii))
-	fmt.Printf("\n \n %s", "\x53\x61\x6C\x75\x74\x2C\x20\xE7\x61\x20\x76" +
-	  "\x61\x20\xB0\x2D\x29\x20\x80\x35\x30")
+	fmt.Println(Hello)
+	return Hello
 }
