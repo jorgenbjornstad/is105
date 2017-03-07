@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import ("fmt"
+	"bytes"
+)
 
 const sang = "\x48\x65\x6e\x72\x69\x6b\x20\x41\x72\x6e\x6f\x6c\x64" +
 "\x20\x57\x65\x72\x67\x65\x6c\x61\x6e\x64\x20\x28\x66\xf8\x64\x74\x20\x31\x37" +
@@ -31,5 +33,13 @@ const sang = "\x48\x65\x6e\x72\x69\x6b\x20\x41\x72\x6e\x6f\x6c\x64" +
 "\x76\x65\x72\x73\x76\x65\x76\x65\x74\x2e\x0a"
 
 func main(){
-	fmt.Printf("%s", sang)
+
+	i := bytes.Replace([]byte(sang), []byte("\xF8"), []byte("ø"), 10)
+	f := bytes.Replace([]byte(i), []byte("\xE5"), []byte("å"), 10)
+	u := bytes.Replace([]byte(f), []byte("\xE6"), []byte("æ"), 10)
+
+
+
+
+	fmt.Printf("%s", u)
 }
