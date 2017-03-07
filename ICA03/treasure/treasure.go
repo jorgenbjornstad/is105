@@ -34,12 +34,9 @@ const sang = "\x48\x65\x6e\x72\x69\x6b\x20\x41\x72\x6e\x6f\x6c\x64" +
 
 func main(){
 
-	i := bytes.Replace([]byte(sang), []byte("\xF8"), []byte("ø"), 10)
-	f := bytes.Replace([]byte(i), []byte("\xE5"), []byte("å"), 10)
-	u := bytes.Replace([]byte(f), []byte("\xE6"), []byte("æ"), 10)
-
-
-
-
+	i := bytes.Replace([]byte(sang), []byte("\xF8"), []byte("\xc3\xb8"), -1)
+	f := bytes.Replace([]byte(i), []byte("\xE5"), []byte("\xc3\xa5"), -1)
+	u := bytes.Replace([]byte(f), []byte("\xE6"), []byte("\xc3\xa6"), -1)
+	
 	fmt.Printf("%s", u)
 }
