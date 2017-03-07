@@ -11,7 +11,7 @@ func main() {
 	e := fileutils.FileToByteslice("C:/work/src/is105/ICA03/files/lang02.wl")
 	f := fileutils.FileToByteslice("C:/work/src/is105/ICA03/files/lang03.wl")
 	//fileTobyteslice.FileToByteslice(lang01.go, string) []
-	fmt.Printf("%b\n", i[:])
-	fmt.Printf("%X\n", e[:])
-	fmt.Printf("%s\n", f[:])
+	fmt.Printf("% X\n", i)
+	fmt.Printf("% X\n", e)
+	fmt.Printf("% X\n", f)
 }
