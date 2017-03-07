@@ -8,6 +8,8 @@ package main
 
 import (
 	"net/http"
+	"time"
+	"fmt"
 )
 
 func main() {
@@ -23,7 +25,10 @@ func foo(w http.ResponseWriter, r *http.Request) {
 
 	// Her skriver man data som er respons til brukeren som har skrevet
 	// http://localhost:3000 i sin nettleser
-	w.Write([]byte("<font color=\"green\">Hvordan  g\xe5r det, <b>\u16a6</b> ? \u23f0</font><br/>"))
+	w.Write([]byte("<font color=\"green\">Hvordan  g\xe5r det, <b>\u16a6</b> ?\u23f0</font><br/>"))
 	w.Write([]byte("\u16a6 - Thurs<br/>"))
+
+	t := time.Date(2009, time.November, 10, 23, 0, 0, 0, time.UTC)
+	fmt.Printf("Go launched at %s\n", t.Local())
 
 }
