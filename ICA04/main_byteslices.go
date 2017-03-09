@@ -12,8 +12,10 @@ func main() {
 	// fmt.Println(byteslice1)
 	// fmt.Printf("%s", byteslice1)
 	// fm.Printf("%q", byteslice1
+        fmt.Println(byteslice1)
+	fmt.Printf("% s", byteslice1)
 
-	fmt.Printf("%s", byteslice1)
-	fmt.Printf("%s", byteslice2)
+	fmt.Println(byteslice2)
+	fmt.Printf("% s", byteslice2)
 
 }
