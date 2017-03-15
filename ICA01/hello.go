@@ -20,6 +20,7 @@ import (
   fmt.println("Kim was here v2")
   fmt.println("Hei,hei!")
   fmt.println("Nå da?")
+  fmt.println("Testtest123")
 <<<<<<< HEAD
   fmt.println("Goodbye")
 =======
