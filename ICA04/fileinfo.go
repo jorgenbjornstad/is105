@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"./files"
+	"io/ioutil"
 )
 
 var (
@@ -13,8 +14,8 @@ var (
 )
 
 func main() {
-
-	fileInfo, err = os.Stat("C:/Work/src/is105/ICA04/files/pg100.txt)
+        arg := os.Args[1]
+	fileInfo, err = os.Stat(arg)
 	if err != nil {
 		log.Fatal(err)
 	}
