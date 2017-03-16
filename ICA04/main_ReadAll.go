@@ -5,11 +5,12 @@ import (
 	"log"
 	"fmt"
 	"io/ioutil"
+	"bytes"
 )
 
 func main() {
 	// Open file for reading
-	file, err := os.Open("./files/text1.txt")
+	file, err := os.Open("C:/Work/src/is105/ICA04/files/text1.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -29,4 +30,5 @@ func main() {
 	fmt.Printf("Data as hex: %x\n", data)
 	fmt.Printf("Data as string: %s\n", data)
 	fmt.Println("Number of bytes read:", len(data))
+	fmt.Println(bytes.Contains([]byte("seafood"), []byte("foo")))
 }
