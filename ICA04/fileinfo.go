@@ -9,7 +9,7 @@ import (
 func main() {
 
 	arg := os.Args[1]
-	fileInfo, err := os.Stat(arg)
+	fileInfo, err := os.Lstat(arg)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -26,7 +26,7 @@ func main() {
 		" in mibibytes.", varGiB, "in gibibytes.")
 	fmt.Println("Is Directory: ", fileInfo.Mode().IsDir())
 	fmt.Println("Is a regular file: ", fileInfo.Mode().IsRegular())
-	fmt.Println("Has UNIX permissions in bits: ", fileInfo.Mode())
+	fmt.Println("Has UNIX permissions bits: ", fileInfo.Mode())
 	fmt.Println("Is append only: ", fileInfo.Mode()&os.ModeAppend != 0)
 	fmt.Println("Is a device file:", fileInfo.Mode()&os.ModeDevice != 0)
 	fmt.Println("Is a UNIX character device: ", (fileInfo.Mode()&os.ModeDevice != 0)&&(fileInfo.Mode()&os.ModeCharDevice != 0))
