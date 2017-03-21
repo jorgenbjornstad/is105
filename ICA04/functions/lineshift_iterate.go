@@ -1,7 +1,7 @@
 package functions
 
 import ("fmt"
-"os"
+	"os"
 	"log"
 	"io/ioutil"
 	"bytes"

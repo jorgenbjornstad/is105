@@ -1,7 +1,7 @@
 package main
 
 import (
-"is105/ICA04/functions"
+"./functions"
 )
 
 
