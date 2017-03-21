@@ -4,8 +4,9 @@ import (
 	"io"
 	"log"
 	"os"
-	"bufio"
+	"bytes"
 	"fmt"
+	"sort"
 )
 
 func FileToByteslice(filename string) []byte {
@@ -36,27 +37,51 @@ func FileToByteslice(filename string) []byte {
 	return byteSlice
 }
 
-
-func BReader (filename string) (*bufio.Reader) {
-	// Open file and create a buffered reader on top
-	f, err := os.Open(filename)
+func SearchText(filename string, detect string) int {
+	// Load the file
+	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
 	}
-	return bufio.NewReader(f)
+	// Buffer set to handle large files
+	buffer := make([]byte, 32*1024)
+	count := 0
+	// Convert string to byte in order to search
+		search := []byte(detect)
+		c, _ := file.Read(buffer)
+		count += bytes.Count(buffer[:c], search)
+	return count
 }
 
-func NumberOfLines(filename string) {
-	// Loads the buffered file
-	reader := BReader(filename)
-	// Read number of lines until end of file
-	for {
-		line, err := reader.ReadString(0x0A)
-		fmt.Printf("%+q\n", line) // Display newlines with %+q
-		if err == io.EOF {
-			break
-		} else if err != nil {
-			log.Fatal(err)
-		}
+func CountRune(filename string) map[int]string {
+	m := make(map[int]string)
+	count := 0
+	for i := 0x20; i <= 0x7F; i++ {
+		count = SearchText(filename, string(i))
+		rune := string(i)
+		m[count] = rune
 	}
+	return m
 }
+
+func PrintRune(m map[int]string) {
+	var keys []int
+	for k := range m {
+		keys = append(keys, k)
+	}
+	sort.Ints(keys)
+
+// Prints the five most read runes in the file.
+	fmt.Println("5 mest forekomne runer:")
+	rune1 := keys[len(keys)-1]
+	rune2 := keys[len(keys)-2]
+	rune3 := keys[len(keys)-3]
+	rune4 := keys[len(keys)-4]
+	rune5 := keys[len(keys)-5]
+	fmt.Println("Antall:", rune1, "Rune:", m[rune1])
+	fmt.Println("Antall:", rune2, "Rune:", m[rune2])
+	fmt.Println("Antall:", rune3, "Rune:", m[rune3])
+	fmt.Println("Antall:", rune4, "Rune:", m[rune4])
+	fmt.Println("Antall:", rune5, "Rune:", m[rune5])
+}
+
