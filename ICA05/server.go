@@ -34,7 +34,7 @@ func main() {
 		place = strings.Replace(place, " ", "+", -1)
 
 		if len(place) <= 0 {place = "UIA+Kristiansand"}
-		r.HTML(200, "index", SiteData{"Christian", "Veldig kjekk gutt", strconv.Itoa(count), getServerIP(), place})
+		r.HTML(200, "index", SiteData{"De grønne slakterne", "Veldig kjekke studenter", strconv.Itoa(count), getServerIP(), place})
 	})
 
 
@@ -47,7 +47,7 @@ func main() {
 
 
 	go countNumber()
-	m.RunOnAddr(":5050")
+	m.RunOnAddr(":8080")
 	m.Run()
 
 
