@@ -6,13 +6,35 @@ import (
 )
 
 type btc struct {
-	Two4HAvg float64 `json:"avg"`
+	Two4HAvg int64 `json:"avg"`
 	Ask float64 `json:"ask"`
 	Bid float64 `json:"bid"`
 	Last float64 `json:"last"`
 	Timestamp string `json:"timestamp"`
 	VolumeBtc float64 `json:"volume_btc"`
 	VolumePercent float64 `json:"volume_percent"`
+}
+
+type bitstampEx struct {
+	Name string `json:"name"`
+	DisplayName string `json:"display_name"`
+	URL string `json:"url"`
+	Timestamp int `json:"timestamp"`
+	DataSource string `json:"data_source"`
+	Symbols struct {
+		BTCEUR struct {
+			Last float64 `json:"last"`
+			Volume float64 `json:"volume"`
+			Ask float64 `json:"ask"`
+			Bid float64 `json:"bid"`
+		} `json:"BTCEUR"`
+		BTCUSD struct {
+			Last float64 `json:"last"`
+			Volume float64 `json:"volume"`
+			Ask float64 `json:"ask"`
+			Bid float64 `json:"bid"`
+		} `json:"BTCUSD"`
+	} `json:"symbols"`
 }
 
 func GetJSON(url string, target interface{}) error {
@@ -58,4 +80,12 @@ func GetBTCDKK() *btc {
 	bitDKK := new(btc)
 	GetJSON(url, bitDKK)
 	return bitDKK
+}
+
+
+func Getbitstamp() *bitstampEx {
+	url := "https://apiv2.bitcoinaverage.com/exchanges/bitstamp"
+	bitstamp := new(bitstampEx)
+	GetJSON(url, bitstamp)
+	return bitstamp
 }

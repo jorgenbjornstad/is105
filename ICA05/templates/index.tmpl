@@ -4,11 +4,43 @@
 </head>
 <body>
     <h2>Valutakurs for Bitcoin til Amerikansk dollar</h2>
-    <p>Gjennomsnittlig siste 24t: ${{.Two4HAvg}} USD</p>
-    <p>Salg: ${{.Ask}} USD</p>
-    <p>Kjøp: ${{.Bid}} USD</p>
-    <p>Siste kurs: ${{.Last}} USD</p>
-    <p>Data hentet {{.Timestamp}}</p>
+    <p>Gjennomsnittlig siste 24t: ${{.btcUSD.Two4HAvg}} USD</p>
+    <p>Salg: ${{.btcUSD.Ask}} USD</p>
+    <p>Kjøp: ${{.btcUSD.Bid}} USD</p>
+    <p>Siste kurs: ${{.btcUSD.Last}} USD</p>
+
+    <h2>Valutakurs for Bitcoin til britiske pund</h2>
+        <p>Gjennomsnittlig siste 24t: £{{.btcGBP.Two4HAvg}} GBP</p>
+        <p>Salg: £{{.btcGBP.Ask}} GBP</p>
+        <p>Kjøp: £{{.btcGBP.Bid}} GBP</p>
+        <p>Siste kurs: £{{.btcGBP.Last}} GBP</p>
+
+        <h2>Valutakurs for Bitcoin til euro</h2>
+            <p>Gjennomsnittlig siste 24t: €{{.btcEUR.Two4HAvg}} EUR</p>
+            <p>Salg: €{{.btcEUR.Ask}} EUR</p>
+            <p>Kjøp: €{{.btcEUR.Bid}} EUR</p>
+            <p>Siste kurs: €{{.btcEUR.Last}} EUR</p>
+
+            <h2>Valutakurs for Bitcoin til norske kroner</h2>
+                <p>Gjennomsnittlig siste 24t: {{.btcNOK.Two4HAvg}}NOK</p>
+                <p>Salg: kr{{.btcNOK.Ask}} NOK</p>
+                <p>Kjøp: {{.btcNOK.Bid}} NOK</p>
+                <p>Siste kurs: {{.btcNOK.Last}} NOK</p>
+
+                <h2>Valutakurs for Bitcoin til danske kroner</h2>
+                    <p>Gjennomsnittlig siste 24t: {{.btcDKK.Two4HAvg}} DKK</p>
+                    <p>Salg: {{.btcDKK.Ask}} DKK</p>
+                    <p>Kjøp: {{.btcDKK.Bid}} DKK</p>
+                    <p>Siste kurs: {{.btcDKK.Last}} DKK</p>
+
+
+                   <p>Exchange: {{.bitstamp.Name}} </p>
+
+
+
+
+
+    <p>Data hentet {{.btcUSD.Timestamp}}</p>
     <br>
     <footer><p><i>Made by</i></p>
     <h4>De Grønne Slakterne</h4></footer>
