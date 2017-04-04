@@ -6,7 +6,7 @@ import (
 )
 
 type btc struct {
-	Two4HAvg int64 `json:"avg"`
+	Two4HAvg float64 `json:"24h_avg"`
 	Ask float64 `json:"ask"`
 	Bid float64 `json:"bid"`
 	Last float64 `json:"last"`
