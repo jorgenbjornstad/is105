@@ -9,8 +9,6 @@ import (
 
 type btcMap map[string]interface{}
 
-var count int = 0
-
 func main() {
 	m := martini.Classic()
 
@@ -24,8 +22,10 @@ func main() {
 		btcEUR := functions.GetBTCEUR()
 		btcNOK := functions.GetBTCNOK()
 		btcDKK := functions.GetBTCDKK()
-
 		bitstamp := functions.Getbitstamp()
+		block := functions.GetLatestBlock()
+
+
 
 		r.HTML(200, "index", btcMap{
 			"btcUSD": btcUSD,
@@ -33,8 +33,9 @@ func main() {
 			"btcEUR": btcEUR,
 			"btcNOK": btcNOK,
 			"btcDKK": btcDKK,
-
 			"bitstamp": bitstamp,
+			"block": block,
+
 
 		})
 	})
@@ -42,7 +43,7 @@ func main() {
 
 
 
-	m.RunOnAddr(":5050")
+	m.RunOnAddr(":8001")
 	m.Run()
 }
 

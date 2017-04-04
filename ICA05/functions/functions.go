@@ -6,7 +6,7 @@ import (
 )
 
 type btc struct {
-	Two4HAvg int64 `json:"avg"`
+	Two4HAvg float64 `json:"24h_avg"`
 	Ask float64 `json:"ask"`
 	Bid float64 `json:"bid"`
 	Last float64 `json:"last"`
@@ -37,6 +37,15 @@ type bitstampEx struct {
 	} `json:"symbols"`
 }
 
+type latestBlock struct {
+	Hash string `json:"hash"`
+	Time int `json:"time"`
+	BlockIndex int `json:"block_index"`
+	Height int `json:"height"`
+	TxIndexes []int `json:"txIndexes"`
+}
+
+
 func GetJSON(url string, target interface{}) error {
 	r, err := http.Get(url)
 	if err != nil {
@@ -45,6 +54,22 @@ func GetJSON(url string, target interface{}) error {
 	defer r.Body.Close()
 
 	return json.NewDecoder(r.Body).Decode(target)
+}
+
+func (b *bitstampEx) LastEUR()  float64 {
+	return b.Symbols.BTCEUR.Last
+}
+
+func (b *bitstampEx) VolumeEUR()  float64 {
+	return b.Symbols.BTCEUR.Volume
+}
+
+func (b *bitstampEx) AskEUR()  float64 {
+	return b.Symbols.BTCEUR.Ask
+}
+
+func (b *bitstampEx) BidEUR() float64 {
+	return b.Symbols.BTCEUR.Bid
 }
 
 func GetBTCUSD() *btc {
@@ -89,3 +114,14 @@ func Getbitstamp() *bitstampEx {
 	GetJSON(url, bitstamp)
 	return bitstamp
 }
+
+
+
+func GetLatestBlock() *latestBlock {
+	url := "https://blockchain.info/latestblock?format=json"
+	block := new(latestBlock)
+	GetJSON(url, block)
+	return block
+}
+
+

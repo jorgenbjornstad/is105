@@ -22,7 +22,7 @@
             <p>Siste kurs: €{{.btcEUR.Last}} EUR</p>
 
             <h2>Valutakurs for Bitcoin til norske kroner</h2>
-                <p>Gjennomsnittlig siste 24t: {{.btcNOK.Two4HAvg}}NOK</p>
+                <p>Gjennomsnittlig siste 24t: {{.btcNOK.Two4HAvg}} NOK</p>
                 <p>Salg: kr{{.btcNOK.Ask}} NOK</p>
                 <p>Kjøp: {{.btcNOK.Bid}} NOK</p>
                 <p>Siste kurs: {{.btcNOK.Last}} NOK</p>
@@ -33,8 +33,20 @@
                     <p>Kjøp: {{.btcDKK.Bid}} DKK</p>
                     <p>Siste kurs: {{.btcDKK.Last}} DKK</p>
 
-
+                <h2>Data from {{.bitstamp.URL}}  </h2>
                    <p>Exchange: {{.bitstamp.Name}} </p>
+
+
+                   <h2>Informasjon om den seneste blokken</h2>
+                   <p>Hash: {{.block.Hash}}</p>
+                   <p>Time: {{.block.Time}}</p>
+                   <p>Block index: {{.block.BlockIndex}}</p>
+                   <p>Block height: {{.block.Height}}</p>
+
+
+                   <h2>Prishistorikk siste måned</h2>
+                   <p>Høyeste pris: {{.dailyUSD.High}}</p>
+
 
 
 
