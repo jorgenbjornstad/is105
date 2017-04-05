@@ -1,2 +1,3 @@
-# is105
-Hovedrepository for Gruppe 9 - The J's i faget IS-105. 
+## IS-105
+# Hovedrepository for Gruppe 9 
+<b>De Grønne Slakterne</b>
