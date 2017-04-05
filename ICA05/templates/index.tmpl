@@ -3,6 +3,7 @@
 
 </head>
 <body>
+<p><i>Data hentet {{.btcUSD.Timestamp}}</i></p>
     <h2>Valutakurs for Bitcoin til Amerikansk dollar</h2>
     <p>Gjennomsnittlig siste 24t: ${{.btcUSD.Two4HAvg}} USD</p>
     <p>Salg: ${{.btcUSD.Ask}} USD</p>
@@ -33,7 +34,7 @@
                     <p>Kjøp: {{.btcDKK.Bid}} DKK</p>
                     <p>Siste kurs: {{.btcDKK.Last}} DKK</p>
 
-                <h2>Data from {{.bitstamp.URL}}  </h2>
+                <h2>Data fra {{.bitstamp.URL}}  </h2>
                    <p>Exchange: {{.bitstamp.Name}} </p>
 
 
@@ -44,13 +45,8 @@
                    <p>Block height: {{.block.Height}}</p>
 
 
-
-
-
-
-    <p>Data hentet {{.btcUSD.Timestamp}}</p>
     <br>
-    <footer><p><i>Made by</i></p>
-    <h4>De Grønne Slakterne</h4></footer>
+    <footer><p><i>Laget av</i> <b>De Grønne Slakterne<b></p>
+    </footer>
 </body>
 </html>
