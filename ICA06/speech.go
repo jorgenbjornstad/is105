@@ -5,7 +5,7 @@ import ("github.com/nicolaifsf/go-speak"
 )
 
 func main() {
-	speech.SetWitKey("UMRVL4TFMAZEUL7U3GQ57ELPIOWSC5YS")
+	speech.SetWitKey("JPTUX4UZQXYNBIZCGRRCB6GKPNRVJFUN")
 	fmt.Println(speech.SendWitVoice("wav/vebjorn_engelsk.wav"))
 
 }
