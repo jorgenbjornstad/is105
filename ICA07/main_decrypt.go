@@ -1,7 +1,9 @@
 package main
 
-import "./decrypting"
-import "fmt"
+import (
+  "./decrypting"
+  "fmt"
+)
 
 func main() {
 decrypted := decrypting.Decrypt()

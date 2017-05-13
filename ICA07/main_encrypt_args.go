@@ -1,7 +1,9 @@
 package main
 
-import "./crypting"
-import "os"
+import (
+  "./crypting"
+  "os"
+)
 
 func main() {
   arg := os.Args[1]

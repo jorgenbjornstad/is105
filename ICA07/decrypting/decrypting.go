@@ -27,6 +27,7 @@ func Decrypt() string {
 		fmt.Printf("Error: NewCipher(%d bytes) = %s", len(key), err)
 		os.Exit(1)
 	}
+
 	fmt.Printf("NewCipher(%d bytes)\n", len(key))
 
 
@@ -34,7 +35,7 @@ func Decrypt() string {
 
 	decrypted := make([]byte, len(message))
 	decrypter.XORKeyStream(decrypted, message)
-	// fmt.Printf("Decrypting %v -> %v : %s\n", message, decrypted, decrypted)
+	
 	decryptedfinal := string(decrypted[:])
 	return decryptedfinal
 }
