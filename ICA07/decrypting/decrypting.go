@@ -4,10 +4,19 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"fmt"
+	"io/ioutil"
 	"os"
 )
 
-func Decrypt(message []byte) string {
+func check(e error) {
+    if e != nil {
+        panic(e)
+    }
+}
+
+func Decrypt() string {
+
+	message, err := ioutil.ReadFile("C:/Work/src/is105/ICA07/message/message.txt")
 
 	key := []byte("ellevilleellever")
 

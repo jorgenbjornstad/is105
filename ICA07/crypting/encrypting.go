@@ -7,7 +7,13 @@ import (
 	"os"
 )
 
-func Encrypt(message string) []byte {
+func check(e error) {
+    if e != nil {
+        panic(e)
+    }
+}
+
+func Encrypt(message string) {
 
 	src := []byte(message)
 
@@ -26,6 +32,12 @@ func Encrypt(message string) []byte {
 
 	encrypted := make([]byte, len(src))
 	encrypter.XORKeyStream(encrypted, src)
-	// fmt.Printf("Encrypting %s : %v -> %v\n", src, []byte(src), encrypted)
-	return encrypted
+
+	os.Remove("C:/Work/src/is105/ICA07/message/message.txt")
+	newfile, err := os.Create("C:/Work/src/is105/ICA07/message/message.txt")
+  check(err)
+	defer newfile.Close()
+
+	newfile.Write(encrypted)
+	fmt.Println("Message encrypted.")
 }
