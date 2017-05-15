@@ -2,35 +2,41 @@ package functions
 
 import (
 	"math"
-	"flag"
 	"fmt"
+	"os"
+	"strconv"
 )
 
-
+// Regner ut log2 av paramteret
 func Log2 (x float64) float64 {
 	var result = math.Log2(x)
 	return result
-
 }
+
+// regner ut log10 av parameteret
 func Log10 (x float64) float64 {
 	var result = math.Log10(x)
 	return result
 }
-
+// tar to argumenter fra kommandolinjen. Arg brukes til å regne ut hvilken logbase vi skal bruke
+// det andre argumentet brukes som parameter i regnestykket.
 func CalcLog () {
 
-	logBase := flag.Float64("Base", 0, "hvilken log base du vil bruke")
-	param := flag.Float64("Parameter", 0, "tallet du vil regne ut logaritmen av")
-	flag.Parse()
+	arg := os.Args[1]
+	arg1 := os.Args[2]
 
-	var log2 float64 = 2
-	var log10 float64 = 10
+	param, err := strconv.ParseFloat(arg1, 64)
+	if err != nil {
+		fmt.Println(err)
+	}
 
-	if *logBase == log2 {
-		fmt.Println(Log2(*param))
-	} else if *logBase == log10 {
-		fmt.Println(Log10(*param))
+	if arg == "log2" {
+		fmt.Println(Log2(param))
+	} else if arg == "log10" {
+		fmt.Println(Log10(param))
 	} else {
-		fmt.Println("Not valid")
+		fmt.Println("Invalid input. Please check if you entered valid arguments.")
+		fmt.Printf(arg)
+		fmt.Println(param)
 	}
 }

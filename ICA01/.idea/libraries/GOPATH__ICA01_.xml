@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;ICA01&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../golang.org" />
+      <root url="file://$PROJECT_DIR$/.." />
+      <root url="file://$PROJECT_DIR$/../../.idea" />
+      <root url="file://$PROJECT_DIR$/../../is110" />
+      <root url="file://$PROJECT_DIR$/../../github.com" />
+      <root url="file://$PROJECT_DIR$/../../speech" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../golang.org" />
+      <root url="file://$PROJECT_DIR$/.." />
+      <root url="file://$PROJECT_DIR$/../../.idea" />
+      <root url="file://$PROJECT_DIR$/../../is110" />
+      <root url="file://$PROJECT_DIR$/../../github.com" />
+      <root url="file://$PROJECT_DIR$/../../speech" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
