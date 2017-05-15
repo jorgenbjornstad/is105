@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Skriv inn fil (files/...)")
+	fmt.Println("Skriv inn filen du ønsker å skanne (files/...)")
 	var filelength = bufio.NewScanner(os.Stdin)
 	var filename string = "Velg en fil"
 	for filelength.Scan() {

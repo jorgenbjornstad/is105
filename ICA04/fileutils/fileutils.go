@@ -44,7 +44,7 @@ func SearchText(filename string, detect string) int {
 		log.Fatal(err)
 	}
 	// Buffer set to handle large files
-	buffer := make([]byte, 32*1024)
+	buffer := make([]byte, 32*4096)
 	count := 0
 	// Convert string to byte in order to search
 		search := []byte(detect)
