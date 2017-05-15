@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82dcc935-6346-48ce-8883-f1e069f563d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ICA01/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ICA02/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ICA06/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ICA07/README.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ICA01/.idea/ICA01.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ICA01/.idea/libraries/GOPATH__ICA01_.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ICA01/.idea/libraries/Go_SDK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ICA01/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ICA01/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ICA05/.gitignore" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ICA07/tcpclient.go" afterPath="$PROJECT_DIR$/ICA07/tcp/tcpclient.go" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ICA07/tcpserver.go" afterPath="$PROJECT_DIR$/ICA07/tcp/tcpserver.go" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ICA07/udpclient.go" afterPath="$PROJECT_DIR$/ICA07/udp/udpclient.go" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ICA07/udpserver.go" afterPath="$PROJECT_DIR$/ICA07/udp/udpserver.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ICA03/README.md" afterPath="$PROJECT_DIR$/ICA03/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ICA04/README.md" afterPath="$PROJECT_DIR$/ICA04/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,8 +73,8 @@
         <entry file="file://$PROJECT_DIR$/ICA03/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="4" column="72" lean-forward="false" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
+              <first_editor relative-caret-position="75">
+                <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -336,6 +320,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="is105" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="is105" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GOPATH &lt;is105&gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jorgenbjornstad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="is105" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ICA07" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -937,8 +951,8 @@
     <entry file="file://$PROJECT_DIR$/ICA03/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="72" lean-forward="false" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
