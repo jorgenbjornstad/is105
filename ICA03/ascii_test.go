@@ -3,16 +3,21 @@ package main
 import (
 	"fmt"
 	"strings"
+	"./ascii"
+	"unicode"
 )
 
 func main() {
-	f := func(r rune) bool {
-		return r < 'A' || r > 'z'
+	hello := ascii.GreetingASCII()
+
+
+	f := func(c rune) bool {
+		return unicode.Is(unicode.ASCII_Hex_Digit, c)
 	}
-	if strings.IndexFunc("HelloWorld", f) != -1 {
-		fmt.Println("Found special char")
-	}
-	if strings.IndexFunc("Hello World", f) != -1 {
-		fmt.Println("Found special char")
+
+	if strings.IndexFunc(hello, f) != -1 {
+		fmt.Println("Found non-ASCII character")
+	} else {
+		fmt.Println("All ASCII here")
 	}
 }
