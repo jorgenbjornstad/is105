@@ -23,7 +23,7 @@ func GreetingASCII() string {
 	fmt.Printf("Den binære representasjonen av \"hello\": %b \n", hello, )
 	fmt.Printf("Den hexadesimale representasjonen av \"hello\": %x \n", hellohex)
   konverterer := string(hello[:])
-	return 
+	return konverterer
 
 
 }
