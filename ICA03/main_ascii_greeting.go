@@ -1,7 +1,9 @@
 package main
 
 import "./ascii"
+import "fmt"
 
 func main() {
-	ascii.GreetingASCII()
+print := ascii.GreetingASCII()
+fmt.Println(print)
 }

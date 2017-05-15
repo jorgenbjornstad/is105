@@ -14,9 +14,16 @@ func IterateOverASCIIStringLiteral() {
 	}
 }
 
-const Hello = "\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29"
-
 func GreetingASCII() string {
-	fmt.Println(Hello)
-	return Hello
+
+	hello := []byte {34, 72, 101, 108, 108, 111, 32, 58, 45, 41, 34}
+  hellohex := "\x22\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29\x22"
+	//fmt.Println(hello, hellohex)
+
+	fmt.Printf("Den binære representasjonen av \"hello\": %b \n", hello, )
+	fmt.Printf("Den hexadesimale representasjonen av \"hello\": %x \n", hellohex)
+  konverterer := string(hello[:])
+	return konverterer
+
+
 }
