@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tekst-til-tale</title>
+</head>
+<body>
+<center>
+    <h1>Tekst-til-tale</h1>
+    <h3>Skriv inn teksten du ønsker å konvertere</h3>
+    <input id="arg" type="text" name="arg" value="">
+    <input type="button" name="button" value="Hør tale" onclick="voiceOut(arg.value)">
+    </form>
+</center>
+<script>
+    function voiceOut(arg) {
+        // Registers the button on-click, constructs a variable for espeakbox to take as argument in text for input,
+        // and returns the converted speech as output. NOTE: RENAME "<instans-ip>" WHEN MOUNTED IMAGE THROUGH INSTANCE.
+        var audio = new Audio('http://<instans-ip>:8080/speech?text=' + arg);
+        audio.play();
+    }
+</script>
+</body>
+</html>
