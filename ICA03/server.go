@@ -27,8 +27,8 @@ func foo(w http.ResponseWriter, r *http.Request) {
 	i := time.Now().Format(time.RFC1123Z)
 	w.Write([]byte("<font color=\"green\">Hvordan  g&#229;r det, <b>\u16a6</b> ?\u23f0</font><br/>"))
 	w.Write([]byte("\u16a6 - Thurs<br/>"))
-	w.Write([]byte("git checkout this clock yo &#128526;&#128512;&#128521;&#128521;&#128521;&#128521;&#128521;&#128521;&#128521;&#128521;<br/>"))
 	w.Write([]byte(i))
+	w.Write([]byte("<br/>git checkout this clock yo &#128526;&#128512;&#128521;&#128521;&#128521;&#128521;&#128521;&#128521;&#128521;&#128521;<br/>"))
 
 
 }
