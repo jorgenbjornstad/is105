@@ -10,7 +10,7 @@ import (
 
 func main() {
 	// Open file for reading
-	file, err := os.Open("C:/Work/src/is105/ICA04/files/text1.txt")
+	file, err := os.Open("./files/text1.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
