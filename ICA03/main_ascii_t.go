@@ -6,7 +6,7 @@ import "./ascii"
 
 func main() {
 a := ascii.Ascii
-h := ascii.Hello
+h, _, _ := ascii.GreetingASCII()
 
 var con bool
 
@@ -21,6 +21,8 @@ for i := 0; i < len(a); i++ {
   }
     if con == false {
       fmt.Println("index", j, "is not part of ASCII")
+    } else {
+      fmt.Println("index", j, "is a part of ASCII")
     }
   }
 }

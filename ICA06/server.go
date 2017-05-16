@@ -2,14 +2,11 @@ package main
 
 import (
 	"net/http"
-	"github.com/go-martini/martini"
-	"github.com/martini-contrib/render"
+	"log"
 )
 
-
 func main() {
-	m := martini.Classic()
+	// Http-pakken kjører index-filen på port 8080.
+	log.Fatal(http.ListenAndServe(":8080", http.FileServer(http.Dir("web"))))
+}
 
-	m.Use( render.Renderer(render.Options{
-		IndentJSON: true, // so we can read it..
-	}))
