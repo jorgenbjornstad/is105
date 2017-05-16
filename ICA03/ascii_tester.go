@@ -8,16 +8,16 @@ import (
 )
 
 func main() {
-	hello, _, _ := ascii.GreetingASCII()
+	_, hellohex, _ := ascii.GreetingASCII()
 
 
 	f := func(c rune) bool {
 		return unicode.Is(unicode.ASCII_Hex_Digit, c)
 	}
-
-	if strings.IndexFunc(hello, f) != -1 {
-		fmt.Println("Found non-ASCII character")
-	} else {
+	fmt.Println(hellohex)
+	if strings.IndexFunc(hellohex, f) != -1 {
 		fmt.Println("All ASCII here")
+	} else {
+		fmt.Println("Found non-ASCII character")
 	}
 }
