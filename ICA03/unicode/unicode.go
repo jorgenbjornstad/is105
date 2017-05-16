@@ -11,23 +11,19 @@ func Translate() {
 
 	a := "is"
 	b := "jp"
-	c := "nord"
-	d := "og"
-	e := "sør"
+	c := "nord og sør"
 
 	var con bool
 	con = false
 
 	arg1 := os.Args[1]
 	arg2 := os.Args[2]
-	arg3 := os.Args[3]
-	arg4 := os.Args[4]
 
-	if (arg1 == c) && (arg2 == d) && (arg3 == e) {
+	if (arg1 == c) {
 		con = true
-		if arg4 == a {
+		if arg2 == a {
 			fmt.Printf("%q \n", x)
-		} else if arg4 == b {
+		} else if arg2 == b {
 			fmt.Printf("%q \n", y)
 	} else {
 		fmt.Println("Skrev du inn riktig språk?")
