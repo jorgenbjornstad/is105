@@ -3,6 +3,13 @@ package main
 import "fmt"
 
 func main() {
+<<<<<<< HEAD
 
 	fmt.Printf("%s\n", "\xc2\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
+=======
+	fmt.Printf("%s \n", "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
+	fmt.Printf("%q \n", "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
+	fmt.Printf("%+q \n", "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
+	fmt.Printf("%c \n", "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98")
+>>>>>>> 507de43c9b80702ada862e3b4306061679167088
 }

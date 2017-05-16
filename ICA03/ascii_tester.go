@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	hello := ascii.GreetingASCII()
+	hello, _, _ := ascii.GreetingASCII()
 
 
 	f := func(c rune) bool {
