@@ -2,14 +2,13 @@ package main
 
 import "os"
 import "fmt"
-import "sum"
+import "./sum"
 
 func main() {
   arg1 := os.Args[1]
   arg2 := os.Args[2]
   arg3 := os.Args[3]
 
-  sum.
 
 if (arg1 == "int32"){
   var1 := sum.ConvertInt(arg2)

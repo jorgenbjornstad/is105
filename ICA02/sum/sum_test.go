@@ -1,6 +1,8 @@
 package sum
 
-import "testing"
+import (
+	"testing"
+)
 
 // Check https://golang.org/ref/spec#Numeric_types and stress the limits!
 var sum_tests_int8 = []struct {
@@ -20,7 +22,7 @@ var sum_tests_int32 = []struct {
 }{
 	{1, 2, 3},
 	{4, 5, 9},
-	{2147483646, 2, 2147483647},
+	{2147483646, 1, 2147483647},
 }
 
 var sum_tests_int64 = []struct {
@@ -29,8 +31,8 @@ var sum_tests_int64 = []struct {
 	expected int64
 }{
 	{1, 2, 3},
-	{4, 5, 9},
-	{118, 1, 180},
+	{9223372036854775807, 0, 9223372036854775807},
+	{92233720368547758, 1, 92233720368547759},
 }
 
 var sum_tests_float64 = []struct {
@@ -39,7 +41,7 @@ var sum_tests_float64 = []struct {
 	expected float64
 }{
 	{1, 2, 3},
-	{4, 5, 9},
+	{1/3, 0, 0.33},
 	{4000, 5000, 9000},
 }
 
@@ -50,7 +52,7 @@ var sum_tests_uint32 = []struct {
 }{
 	{1, 2, 3},
 	{4, 5, 9},
-	{10, 1, 9},
+	{10, 0, 10},
 }
 
 func TestSumInt32(t *testing.T) {
