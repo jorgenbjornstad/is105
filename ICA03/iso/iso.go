@@ -20,7 +20,6 @@ for i := 0x80; i <= 0xFF; i++ {
 	extascii = append(extascii, byte (i))
 	}
 	return string(extascii)
-// fmt.Printf("%c", extascii)
 }
 
 func IterateOverExtendedASCIIStringLiteral(extascii string) {
