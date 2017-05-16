@@ -9,7 +9,7 @@ import (
 func main() {
 
 	arg := os.Args[1]
-	fileInfo, err := os.Lstat(arg)
+	fileInfo, err := os.Stat(arg)
 	if err != nil {
 		log.Fatal(err)
 	}
