@@ -25,9 +25,9 @@ func main() {
 		return
 	}
 	for {
-		_, remoteaddr, err := ser.ReadFromUDP(p)
-	//	q := decrypting.Decrypt(p)
-		fmt.Printf("Read a message from %v %s \n", remoteaddr, p)
+		q, remoteaddr, err := ser.ReadFromUDP(p)
+		x := decrypting.Decrypt(q)
+		fmt.Printf("Read a message from %v %s \n", remoteaddr, x)
 		if err != nil {
 			fmt.Printf("Some error  %v", err)
 			continue
