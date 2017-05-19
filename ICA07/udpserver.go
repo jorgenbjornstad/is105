@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net"
+	"encoding/binary"
 	"./decrypting"
 )
 
@@ -26,8 +27,10 @@ func main() {
 	}
 	for {
 		q, remoteaddr, err := ser.ReadFromUDP(p)
-		x := decrypting.Decrypt(q)
-		fmt.Printf("Read a message from %v %s \n", remoteaddr, x)
+		fmt.Println(q)
+		//y :=
+		//x := decrypting.Decrypt(q)
+		fmt.Printf("Leste melding fra  %v %s \n", remoteaddr, p)
 		if err != nil {
 			fmt.Printf("Some error  %v", err)
 			continue

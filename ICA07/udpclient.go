@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-    //p :=  make([]byte, 2048)
-    p := crypting.Encrypt("snart sommerferie")
+    p :=  make([]byte, 2048)
+    //p := crypting.Encrypt("snart sommerferie")
     conn, err := net.Dial("udp", "127.0.0.1:8080")
     if err != nil {
         fmt.Printf("Some error %v", err)
