@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"net"
-	"encoding/binary"
-	"./decrypting"
+	//"encoding/binary"
+	//"./decrypting"
 )
 
 func sendResponse(conn *net.UDPConn, addr *net.UDPAddr) {
