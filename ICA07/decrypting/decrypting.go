@@ -15,7 +15,7 @@ func check(e error) {
     }
 }
 
-func Decrypt(message []byte) string {
+func Decrypt() string {
 
     message, err := ioutil.ReadFile("C:/Work/src/is105/ICA07/message/message.txt")
 
