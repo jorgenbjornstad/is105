@@ -1,11 +1,12 @@
+
 package decrypting
 
 import (
-	"crypto/aes"
-	"crypto/cipher"
-	"fmt"
-	//"io/ioutil"
-	"os"
+    "crypto/aes"
+    "crypto/cipher"
+    "fmt"
+    "io/ioutil"
+    "os"
 )
 
 func check(e error) {
@@ -16,26 +17,26 @@ func check(e error) {
 
 func Decrypt(message []byte) string {
 
-	// message, err := ioutil.ReadFile("C:/Work/src/is105/ICA07/message/message.txt")
+    message, err := ioutil.ReadFile("C:/Work/src/is105/ICA07/message/message.txt")
 
-	key := []byte("ellevilleellever")
+    key := []byte("ellevilleellever")
 
-	var iv = []byte("abcdef1234567890")[:aes.BlockSize]
+    var iv = []byte("abcdef1234567890")[:aes.BlockSize]
 
-	block, err := aes.NewCipher(key)
-	if err != nil {
-		fmt.Printf("Error: NewCipher(%d bytes) = %s", len(key), err)
-		os.Exit(1)
-	}
+    block, err := aes.NewCipher(key)
+    if err != nil {
+        fmt.Printf("Error: NewCipher(%d bytes) = %s", len(key), err)
+        os.Exit(1)
+    }
 
-	fmt.Printf("NewCipher(%d bytes)\n", len(key))
+    fmt.Printf("NewCipher(%d bytes)\n", len(key))
 
 
-	decrypter := cipher.NewCFBDecrypter(block, iv)
+    decrypter := cipher.NewCFBDecrypter(block, iv)
 
-	decrypted := make([]byte, len(message))
-	decrypter.XORKeyStream(decrypted, message)
+    decrypted := make([]byte, len(message))
+    decrypter.XORKeyStream(decrypted, message)
 
-	decryptedfinal := string(decrypted[:])
-	return decryptedfinal
+    decryptedfinal := string(decrypted[:])
+    return decryptedfinal
 }

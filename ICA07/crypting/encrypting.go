@@ -33,12 +33,12 @@ func Encrypt(message string) []byte {
 	encrypted := make([]byte, len(src))
 	encrypter.XORKeyStream(encrypted, src)
 
-	//os.Remove("C:/Work/src/is105/ICA07/message/message.txt")
-	//newfile, err := os.Create("C:/Work/src/is105/ICA07/message/message.txt")
-  //check(err)
-	//defer newfile.Close()
+	os.Remove("C:/Work/src/is105/ICA07/message/message.txt")
+	newfile, err := os.Create("C:/Work/src/is105/ICA07/message/message.txt")
+  check(err)
+	defer newfile.Close()
 
-	//newfile.Write(encrypted)
+	newfile.Write(encrypted)
 	fmt.Println("Message encrypted.")
 	return encrypted
 }
