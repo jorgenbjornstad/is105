@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net"
+	"./decrypting"
 )
 
 func sendResponse(conn *net.UDPConn, addr *net.UDPAddr) {
@@ -25,7 +26,8 @@ func main() {
 	}
 	for {
 		_, remoteaddr, err := ser.ReadFromUDP(p)
-		fmt.Printf("Read a message from %v %s \n", remoteaddr, p)
+		q := decrypting.Decrypt(p)
+		fmt.Printf("Read a message from %v %s \n", remoteaddr, q)
 		if err != nil {
 			fmt.Printf("Some error  %v", err)
 			continue
