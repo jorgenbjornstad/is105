@@ -4,7 +4,7 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"fmt"
-	"io/ioutil"
+	//"io/ioutil"
 	"os"
 )
 
@@ -14,9 +14,9 @@ func check(e error) {
     }
 }
 
-func Decrypt() string {
+func Decrypt(message []byte) string {
 
-	message, err := ioutil.ReadFile("C:/Work/src/is105/ICA07/message/message.txt")
+	// message, err := ioutil.ReadFile("C:/Work/src/is105/ICA07/message/message.txt")
 
 	key := []byte("ellevilleellever")
 
@@ -35,7 +35,7 @@ func Decrypt() string {
 
 	decrypted := make([]byte, len(message))
 	decrypter.XORKeyStream(decrypted, message)
-	
+
 	decryptedfinal := string(decrypted[:])
 	return decryptedfinal
 }

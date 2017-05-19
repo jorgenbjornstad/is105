@@ -1,16 +1,18 @@
 package main
 
 import "./huffman"
+import "fmt"
 
 /*
 a := 000
-b := 100
+b := 001
 c := 111
-d := 01
-e := 011
-f := 10
+d := 10
+e := 110
+f := 01
 */
 
 func main(){
-  huffman.Decode("00010011101011101001011111100000")
+  x, _ := huffman.Decode("1110000011111011001")
+  fmt.Println(x)
 }
