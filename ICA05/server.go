@@ -9,6 +9,8 @@ import (
 
 type btcMap map[string]interface{}
 
+
+
 func main() {
 	m := martini.Classic()
 
@@ -17,13 +19,16 @@ func main() {
 	}))
 
 	m.Get("/", func(r render.Render, x *http.Request) {
-		btcUSD := functions.GetBTCUSD()
-		btcGBP := functions.GetBTCGBP()
-		btcEUR := functions.GetBTCEUR()
-		btcNOK := functions.GetBTCNOK()
-		btcDKK := functions.GetBTCDKK()
-		bitstamp := functions.Getbitstamp()
-		block := functions.GetLatestBlock()
+		done := make(chan bool, 7)
+		btcUSD := functions.GetBTCUSD(done)
+		btcGBP := functions.GetBTCGBP(done)
+		btcEUR := functions.GetBTCEUR(done)
+		btcNOK := functions.GetBTCNOK(done)
+		btcDKK := functions.GetBTCDKK(done)
+		bitstamp := functions.Getbitstamp(done)
+		block := functions.GetLatestBlock(done)
+
+		<- done
 
 
 

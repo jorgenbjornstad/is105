@@ -58,6 +58,7 @@ func GetJSON(url string, target interface{}) error {
 
 func (b *bitstampEx) LastEUR()  float64 {
 	return b.Symbols.BTCEUR.Last
+
 }
 
 func (b *bitstampEx) VolumeEUR()  float64 {
@@ -72,55 +73,62 @@ func (b *bitstampEx) BidEUR() float64 {
 	return b.Symbols.BTCEUR.Bid
 }
 
-func GetBTCUSD() *btc {
+func GetBTCUSD(done chan bool) *btc {
 	url := "https://api.bitcoinaverage.com/ticker/global/USD/"
 	bitUSD := new(btc)
 	GetJSON(url, bitUSD)
+	done <- true
 	return bitUSD
 }
 
-func GetBTCEUR() *btc {
+func GetBTCEUR(done chan bool) *btc {
 	url := "https://api.bitcoinaverage.com/ticker/global/EUR/"
 	bitEUR := new(btc)
 	GetJSON(url, bitEUR)
+	done <- true
 	return bitEUR
 }
 
-func GetBTCNOK() *btc {
+func GetBTCNOK(done chan bool) *btc {
 	url := "https://api.bitcoinaverage.com/ticker/global/NOK/"
 	bitNOK := new(btc)
 	GetJSON(url, bitNOK)
+	done <- true
 	return bitNOK
 }
 
-func GetBTCGBP() *btc {
+func GetBTCGBP(done chan bool) *btc {
 	url := "https://api.bitcoinaverage.com/ticker/global/GBP/"
 	bitGBP := new(btc)
 	GetJSON(url, bitGBP)
+	done <- true
 	return bitGBP
 }
 
-func GetBTCDKK() *btc {
+func GetBTCDKK(done chan bool) *btc {
 	url := "https://api.bitcoinaverage.com/ticker/global/DKK/"
 	bitDKK := new(btc)
 	GetJSON(url, bitDKK)
+	done <- true
 	return bitDKK
 }
 
 
-func Getbitstamp() *bitstampEx {
+func Getbitstamp(done chan bool) *bitstampEx {
 	url := "https://apiv2.bitcoinaverage.com/exchanges/bitstamp"
 	bitstamp := new(bitstampEx)
 	GetJSON(url, bitstamp)
+	done <- true
 	return bitstamp
 }
 
 
 
-func GetLatestBlock() *latestBlock {
+func GetLatestBlock(done chan bool) *latestBlock {
 	url := "https://blockchain.info/latestblock?format=json"
 	block := new(latestBlock)
 	GetJSON(url, block)
+	done <- true
 	return block
 }
 
