@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./fileutils"
+	"is105/ICA04/fileutils"
 )
 func main() {
 	byteslice1 := fileutils.FileToByteslice("./files/text1.txt")

@@ -1,7 +1,7 @@
 package main
 
 import (
-  "./scan"
+  "is105/ICA04/scan"
   "fmt"
   "bufio"
   "os"
