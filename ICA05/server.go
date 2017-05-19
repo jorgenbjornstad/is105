@@ -17,13 +17,13 @@ func main() {
 	}))
 
 	m.Get("/", func(r render.Render, x *http.Request) {
-		btcUSD := functions.GetBTCUSD()
-		btcGBP := functions.GetBTCGBP()
-		btcEUR := functions.GetBTCEUR()
-		btcNOK := functions.GetBTCNOK()
-		btcDKK := functions.GetBTCDKK()
-		bitstamp := functions.Getbitstamp()
-		block := functions.GetLatestBlock()
+		btcUSD := functions.GetBTCUSD();
+		btcGBP := functions.GetBTCGBP();
+		btcEUR := functions.GetBTCEUR();
+		btcNOK := functions.GetBTCNOK();
+		btcDKK := functions.GetBTCDKK();
+		bitstamp := functions.Getbitstamp();
+		block := functions.GetLatestBlock();
 
 
 
